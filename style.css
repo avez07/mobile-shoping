@@ -1,40 +1,81 @@
-.sidenav {
-    height: 100%; /* 100% Full-height */
-    width: 0; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
-    top: 0; /* Stay at the top */
-    left: 0;
-    background-color: #111; /* Black*/
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+body{
+  padding: 0;
+  margin: 0;
+}
+  .drop {
+    height: 0; 
+    width: 100%; 
+    z-index: 1; 
+   
+       overflow-x: hidden;     
+      overflow: hidden;
+      transition: height 0.5s;
+    padding-left: 20px;
+    
+  }
+  .drop a{
+    border: none !important;
   }
   
-  /* The navigation menu links */
+  
+  
+  
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #03202f;
+    overflow-x: hidden;
+    transition: 0.5s;
+    
+  }
+  .search{
+    background-color:#07547b;
+    color: #ffffff;
+    border-radius: 0;
+  }
+  .search-bar{
+    border-radius: 4px 0 0 4px;
+  }
+  
   .sidenav a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
-    font-size: 25px;
-    color: #818181;
+    font-size: 16px ;
+    color: #cec8c8;
     display: block;
     transition: 0.3s;
+    text-transform: uppercase;   
+    font-weight: 600;
   }
   
-  /* When you mouse over the navigation links, change their color */
   .sidenav a:hover {
     color: #f1f1f1;
+    padding-left: 35px;
   }
   
-  /* Position and style the close button (top right corner) */
   .sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
+   
     font-size: 36px;
-    margin-left: 50px;
+   text-align: end;
   }
-  @media screen and (max-height: 450px) {
+  .underline{
+    height: 4px;
+    width: 70px;
+    background-color: #c81e1e;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+  }
+
+ 
+  @media screen and (max-width: 600px) {
     .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
+    .sidenav a {font-size: 15px;}
+    .siz-imge{
+      height: 25vh !important;
+    }
   }

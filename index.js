@@ -1,13 +1,29 @@
-function toggleNav() {
-    var nav = document.getElementById("mySidenav");
-    var main = document.getElementById("main");
+
+function openNav() {
   
-    if (nav.style.width === "0px") {
-      nav.style.width = "150px";
-      main.style.marginLeft = "150px";
-    } else {
-      nav.style.width = "0px";
-      main.style.marginLeft = "0px";
-    }
+  document.getElementById("mySidenav").style.width = "250px";
+  document.body.style.backgroundColor = "rgba(0,0,0,0.8)";
+
+}
+
+/* Set the width of the side navigation to 0 */
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.body.style.backgroundColor = "white";
+}
+function toggleNav2() {
+  var nav = document.getElementById("drop");
+
+
+  if (nav.style.height === "115px") {
+    nav.style.height = "0px";
+    nav.style.paddingY = "0px";
+
+
+  } else {
+    nav.style.height = "115px";
+    nav.style.paddingY = "20px";
+
+
   }
-  
+}
