@@ -60,7 +60,8 @@ body{
   .sidenav .closebtn {
    
     font-size: 36px;
-   text-align: end;
+   position: absolute;
+   right: 0;
   }
   .underline{
     height: 4px;
@@ -75,7 +76,64 @@ body{
     text-overflow: ellipsis;
     white-space: nowrap;
   }
+.profile-mage img{
+  height: 22vh;
+  width: auto;
+ 
+  
+}
+.profile-mage{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 7vh;
+ 
+}
+.add-links{
+  list-style-type: none;
+  padding: 0;
+ text-transform: capitalize;
+ font-weight: 600;
+ font-size: 17px;
+ box-shadow: -3px -3px 15px #b3b4b4;
+ padding: 35px 30px;
 
+}
+.profile{
+  align-items: center;
+    display: flex;
+    height: 100vh;
+}
+.tabular{
+
+margin-top: 30px;
+}
+.add-links li{
+ border-bottom: 2px solid #0f0f0f;
+  padding: 12px 0;
+  cursor: pointer;
+}
+.add-links .active {
+  border-bottom: 2px solid #c81e1e;
+  
+
+ }
+ .add-links .active-2 {
+  color: #c81e1e;
+ }
+.add-links li i{
+  color: #0c0c0c;
+}
+.brown{
+  color: #c81e1e;
+}
+.address-info{
+  width: 100%;
+  box-shadow: 3px -3px 15px #b3b4b4;
+  margin: 20px 20px;
+  padding: 10px 30px;
+
+}
  
   @media screen and (max-width: 600px) {
     .sidenav {padding-top: 15px;}
