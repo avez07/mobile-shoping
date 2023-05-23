@@ -1,3 +1,4 @@
+<?php session_start() ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,7 +20,7 @@
   <section class="top-nav" style="background-color: #03202f;">
     <nav class="navbar navbar-expand text-light">
       <div class="container-fluid justify-content-around">
-        <a class="navbar-brand text-light" href="#">Navbar</a>
+        <?php echo '<a class="navbar-brand text-light" href="#">'.$_SESSION["customer_name"].'</a>';?>
 
         <form class="d-flex" style="width: 70%;" role="search">
           <input class="form-control search-bar" type="search" placeholder="Search" aria-label="Search">

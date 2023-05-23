@@ -45,18 +45,17 @@ function password() {                                //ipassword show hide funct
 }
 function password2() {                                                 //ipassword show hide function for login page 
   var y = document.getElementsByClassName("sign");
-  if (y[3].type === "password" || y[4].type === "password") {
-    y[3].type = "text";
-    y[4].type = "text";
+  if (y[9].type === "password" || y[4].type === "password") {
+    y[9].type = "text";
+   
 
 
     document.getElementById("eye-4").style.display = "none";
     document.getElementById("eye-3").style.display = "inline-block";
   }
   else {
-    y[3].type = "password";
-    y[4].type = "password";
-
+    y[9].type = "password";
+   
     document.getElementById("eye-4").style.display = "inline-block";
     document.getElementById("eye-3").style.display = "none";
 

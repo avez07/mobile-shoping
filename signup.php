@@ -11,7 +11,7 @@ require_once "./partials/signup-detail.php";
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>bookbaddies</title>
+    <title>wonders walk</title>
     <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
@@ -39,7 +39,7 @@ if ($showalert) {
 
 
                     <form class="signup-form" method="post" onsubmit="return validate()"
-                        action="">
+                        action="partial/signup-add.php">
                         <div class="borders row">
                             <p class="head">signup</p>
 
@@ -51,7 +51,7 @@ if ($showalert) {
                             </div>
                             <div class="col-md-6 text-capitalize fw-semibold">
                                 <label for="phone">phone</label><br>
-                                <input type="text" class="sign form-input" name="name" id="phone"
+                                <input type="phone" class="sign form-input" name="phone-number" id="phone"
                                     placeholder="Enter your phone number">
                                 <p class="text-danger fw-semibold" id="phone-d"></p>
                             </div>
@@ -100,7 +100,7 @@ if ($showalert) {
 
                             <div class="col-md-6 text-capitalize fw-semibold">
                                 <label for="pass2">Confirm Password</label><br>
-                                <input type="password" class="sign form-input" name="pass2" id="password2"
+                                <input type="password" class="sign form-input" name="pass1" id="password2"
                                     placeholder="Enter your password ">
                                 <span><i class="fa-solid fa-eye-slash  eye-e" onclick="password2()"
                                         id="eye-3"></i></span>
@@ -109,7 +109,7 @@ if ($showalert) {
                             </div>
                             <div>
                                 <input type="submit" value="Sign UP"  class="submit" id="submit">
-                                <p class="text-center m-0">Alredy have a account ? <a href="login.php">Login</a></p>
+                                <p class="text-center m-0">Alredy have a account ? <a href="index.php">Login</a></p>
 
                             </div>
                     </form>

@@ -25,7 +25,7 @@
                             <div class="borders">
                                 <p class="head">login</p>
                               
-                                <!-- <?php
+                                 <?php
                               require_once "config.php";
                                
                                 session_start();
@@ -35,7 +35,7 @@
     
                                    
                                 };
-                                include "./partials/login-logics.php";
+                                include "partial/login-logics.php";
     
                                
                                    if ($show_login_error) {
@@ -45,7 +45,7 @@
                                  </div>';
                                    }
                                 
-                               ?> -->
+                               ?>
     
                                  <label for="name">username</label><br>
                                  <input type="text" name="user" class="log form-input" id="user"  placeholder="enter your username" ><br><br>
