@@ -1,1 +1,1 @@
-# mobile-shoping
+"This is an e-commerce website for selling different types of shoes with various categories. To clone this repository, you need to understand the code. The database named 'wonder' and other required data, such as tables, are uploaded in this repository. This website has been developed according to the client's requirements."
