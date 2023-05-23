@@ -18,15 +18,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->execute();
     $result = $stmt->get_result();
 
-    $stm = $conn->prepare("SELECT CUSTOMER_NAME FROM shoe_user_5599 WHERE USER_NAME = ? AND PASSWORD_1 = ?");
-    $stm->bind_param("ss", $username, $password);
-    $stm->execute();
-    $result = $stm->get_result();
-    $row = $result->fetch_assoc();
-    $_SESSION['customer_name'] = $row['CUSTOMER_NAME'];
-
+  
+   
     // Check if the query returned any rows
     if ($result->num_rows == 1) {
+       
+        $row = $result->fetch_assoc();
+        $_SESSION['customer_name'] = $row['CUSTOMER_NAME'];
         $user = true;
         // Redirect the user to the admin dashboard
         header("Location:./shop.php");
@@ -36,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
      
     } 
     if ($_SESSION['user_name'] == "admin" &&  $_SESSION['password'] == "password") {
-        header("Location: ../shop.php");
+        header("Location: ../admin-deals.php");
         exit();
        
     } 
