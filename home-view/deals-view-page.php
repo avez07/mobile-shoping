@@ -50,7 +50,7 @@ $sql_result_2 = $conn->query($sql_query_2);
     if ($sql_result_2->num_rows > 0) {
       while ($row = $sql_result_2->fetch_assoc()) {
 echo '<div class="col-lg-3 col-6">
-          <a href = "deals-view.php"><div class="card my-4">
+          <a href = "deals-view.php" style = "text-decoration : none;"><div class="card my-2">
             <img src="deals-image-upload/'.$row['FOOT_IMG'].'" class="card-img-top high" alt="...">
             <div class="card-body">
               <div class="d-flex justify-content-between">
