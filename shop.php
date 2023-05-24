@@ -1,4 +1,6 @@
-<?php session_start() ?>
+<?php session_start();
+include "partial/login-logics.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -49,8 +51,16 @@
           </div>
         </a>
 
-
-        <a href="adreress.html"><span><i class="fa-solid fa-user pe-2"></i></span>account</a>
+        <?php
+        if ($user) {
+          echo '<a href="adreress.html"><span><i class="fa-solid fa-user pe-2"></i></span>account</a>';
+        }
+       
+        if ($admin) {
+       
+        echo ' <a href="admin-deals.php"><span><i class="fa-solid fa-user pe-2"></i></span>account</a>';
+        }
+        ?>
         <a href="#"><span><i class="fa-solid fa-circle-question pe-2"></i></span> about</a>
         <a href="#"><span><i class="fa-solid fa-envelope pe-2"></i></span> contact</a>
       </div>
@@ -120,58 +130,9 @@
         <div class="underline"></div>
       </div>
       <div class="sale-img row">
-        <div class="col-lg-3 col-6">
-          <div class="card">
-            <img src="images/sale-image-1.webp" class="card-img-top" alt="...">
-            <div class="card-body">
-              <div class="d-flex justify-content-between">
-                <p class="card-text"><span class="fs-6 bg-danger fw-semibold px-2 py-1 text-light">Up to 50%
-                    off</span><span class="fs-6 text-danger ms-2 fw-semibold">Deal</span></p>
-                <p><span class="fw-semibold text-right">$115</span></p>
-              </div>
-              <p>Robbie jones Men's Running Shoe</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-6">
-          <div class="card">
-            <img src="images/sale-image-2.webp" class="card-img-top" alt="...">
-            <div class="card-body">
-              <div class="d-flex justify-content-between">
-                <p class="card-text"><span class="fs-6 bg-danger fw-semibold px-2 py-1 text-light">Up to 36%
-                    off</span><span class="fs-6 text-danger ms-2 fw-semibold">Deal</span></p>
-                <p><span class="fw-semibold text-right">$203</span></p>
-              </div>
-              <p class="naow">BESPOKE BLACK LEATHER LIGHT WEIGHT BIKER BOOTS</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-6">
-          <div class="card">
-            <img src="images/sale-image-1.webp" class="card-img-top" alt="...">
-            <div class="card-body">
-              <div class="d-flex justify-content-between">
-                <p class="card-text"><span class="fs-6 bg-danger fw-semibold px-2 py-1 text-light">Up to 50%
-                    off</span><span class="fs-6 text-danger ms-2 fw-semibold">Deal</span></p>
-                <p><span class="fw-semibold text-right">$115</span></p>
-              </div>
-              <p>Robbie jones Men's Running Shoe</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-6">
-          <div class="card">
-            <img src="images/sale-image-1.webp" class="card-img-top" alt="...">
-            <div class="card-body">
-              <div class="d-flex justify-content-between">
-                <p class="card-text"><span class="fs-6 bg-danger fw-semibold px-2 py-1 text-light">Up to 50%
-                    off</span><span class="fs-6 text-danger ms-2 fw-semibold">Deal</span></p>
-                <p><span class="fw-semibold text-right">$115</span></p>
-              </div>
-              <p>Robbie jones Men's Running Shoe</p>
-            </div>
-          </div>
-        </div>
+        <?php include "home-view/deals-view-page.php" ?>
+
+       
       </div>
     </div>
 

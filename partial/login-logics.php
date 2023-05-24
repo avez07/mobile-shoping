@@ -34,7 +34,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
      
     } 
     if ($_SESSION['user_name'] == "admin" &&  $_SESSION['password'] == "password") {
-        header("Location: ../admin-deals.php");
+        $admin = true;
+        $_SESSION['customer_name'] = "AAVEZ";
+        header("Location: ./shop.php");
         exit();
        
     } 

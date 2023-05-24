@@ -106,50 +106,94 @@ include  "html-head.php";
       </div>
       <div class="sale-img row">
        <?php
-       include "partial/deals-veiw-show.php"
+       include "click-view-back/deals-veiw-show.php"
        ?>
-        <div class="col-lg-3 col-6">
-          <div class="card">
-            <img src="images/sale-image-2.webp" class="card-img-top" alt="...">
-            <div class="card-body">
-              <div class="d-flex justify-content-between">
-                <p class="card-text"><span class="fs-6 bg-danger fw-semibold px-2 py-1 text-light">Up to 36%
-                    off</span><span class="fs-6 text-danger ms-2 fw-semibold">Deal</span></p>
-                <p><span class="fw-semibold text-right">$203</span></p>
-              </div>
-              <p class="naow">BESPOKE BLACK LEATHER LIGHT WEIGHT BIKER BOOTS</p>
-            </div>
-          </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="brands">
+    <div class="container-fluid py-3 px-lg-5">
+      <div class="head py-5">
+        <p class="fs-5 text-capitalize fw-semibold text-center mb-1">explore brands</p>
+        <div class="underline"></div>
+      </div>
+      <div class="row">
+        <div class="col-lg-3" style="opacity: 0.6;">
+          <img src="images/brand/addidas.png" class="img-fluid" alt="...">
         </div>
-        <div class="col-lg-3 col-6">
-          <div class="card">
-            <img src="images/sale-image-1.webp" class="card-img-top" alt="...">
-            <div class="card-body">
-              <div class="d-flex justify-content-between">
-                <p class="card-text"><span class="fs-6 bg-danger fw-semibold px-2 py-1 text-light">Up to 50%
-                    off</span><span class="fs-6 text-danger ms-2 fw-semibold">Deal</span></p>
-                <p><span class="fw-semibold text-right">$115</span></p>
-              </div>
-              <p>Robbie jones Men's Running Shoe</p>
-            </div>
-          </div>
+        <!-- brand 2 -->
+        <div class="col-lg-3" style="opacity: 0.6;">
+          <img src="images/brand/armour.png" class="img-fluid" alt="...">
         </div>
-        <div class="col-lg-3 col-6">
-          <div class="card">
-            <img src="images/sale-image-1.webp" class="card-img-top" alt="...">
-            <div class="card-body">
-              <div class="d-flex justify-content-between">
-                <p class="card-text"><span class="fs-6 bg-danger fw-semibold px-2 py-1 text-light">Up to 50%
-                    off</span><span class="fs-6 text-danger ms-2 fw-semibold">Deal</span></p>
-                <p><span class="fw-semibold text-right">$115</span></p>
-              </div>
-              <p>Robbie jones Men's Running Shoe</p>
-            </div>
-          </div>
+        <!-- brand 3 -->
+        <div class="col-lg-3" style="opacity: 0.6;">
+          <img src="images/brand/Clarks.png" class="img-fluid" alt="...">
+        </div>
+        <!-- brand 4 -->
+        <div class="col-lg-3" style="opacity: 0.6;">
+          <img src="images/brand/new-balance.png" class="img-fluid" alt="...">
+        </div>
+        <!-- band 5 -->
+        <div class="col-lg-3" style="opacity: 0.6;">
+          <img src="images/brand/nike.png" class="img-fluid" alt="...">
+        </div>
+        <!-- brand 6 -->
+        <div class="col-lg-3" style="opacity: 0.6;">
+          <img src="images/brand/campus.png" class="img-fluid" alt="...">
+        </div>
+        <!-- brand 7 -->
+        <div class="col-lg-3" style="opacity: 0.6;">
+          <img src="images/brand/reebok.png" class="img-fluid" alt="...">
+        </div>
+        <!-- brand 8 -->
+        <div class="col-lg-3" style="opacity: 0.6;">
+          <img src="images/brand/puma.png" class="img-fluid" alt="...">
         </div>
       </div>
     </div>
-
+  </section>
+  <section class="footer text-light" style="background-color: #1d1d1d;">
+    <div class="container-fluid py-5 px-4">
+      <div class="row">
+        <div class="col-lg-3">
+          <p class="fs-4 fw-bold text-uppercase">download</p>
+          <p class="fs-6 fw-semibold text-capitalize"> downloads our app for android and ios</p>
+          <div>
+            <div>
+              <img src="images/brand/footer.png" width="150" class="text-center mb-3" alt="apple logo">
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <p class="fs-4 fw-bold text-uppercase">shopping</p>
+          <p class="fs-6 fw-semibold text-capitalize">our purpose is to give shoppers a memorable and enjoyable
+            experience while providing them with a wide range of high-quality products and exceptional customer service.
+          </p>
+         
+        </div>
+        <div class="col-lg-2">
+          <p class="fs-4 fw-bold text-uppercase">links</p>
+          <ul class="fs-6 fw-semibold text-capitalize" style="list-style: none;padding: 0;">
+            <li>cupons</li>
+            <li>blog posts</li>
+            <li>return policy</li>
+            <li>join us</li>
+          </ul>
+         
+        </div>
+        <div class="col-lg-2">
+          <p class="fs-4 fw-bold text-uppercase">follow us</p>
+          <ul class="fs-6 fw-semibold text-capitalize" style="list-style: none;padding: 0;">
+            <li>facebook</li>
+            <li>instagram</li>
+            <li>twitter</li>
+            <li>linkedin</li>
+          </ul>
+         
+        </div>
+      </div>
+    </div>
   </section>
   
 
