@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -63,8 +65,7 @@
             </div>
     </section>
     <!-- navbar 2 -->
-    <section style="background-color: #076493;
-      ">
+    <section style="background-color: #076493;">
         <nav class="navbar navbar-expand  p-0 ps-2 text-capitalize fw-semibold">
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -95,9 +96,9 @@
     <section class="pt-5">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-5">
-                    <div class="shoe-img">
-                        <img src="deals-image-upload/IMG-646e33c5d4d732.57948308.jpg" class="w-100 img-fluid"
+                <div class="col-md-6">
+                    <div class="shoe-img sticky-sm-top">
+                        <img src="deals-image-upload/IMG-646e4156e52a54.30914338.jpg" style="height: 30rem; position: sticky;" class="w-100 img-fluid"
                             alt="dhoe image">
                     </div>
                 </div>
@@ -129,49 +130,183 @@
                             <span class="price ps-2">$114.99</span>
                         </p>
                     </div>
-                    <form action="" class="d-flex">
-                        <div style="width: 50%;">
-                            <span class="text-capitalize fw-semibold">quantity: </span>
-                            <select name="qty" style="width: 30%;" id="quantity">
-                                <option value="1" selected>1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                            </select>
+                    <form action="">
+                        <div class="d-flex">
+                            <div style="width: 50%;">
+                                <span class="text-capitalize fw-semibold">quantity: </span>
+                                <select name="qty" style="width: 30%;" id="quantity">
+                                    <option value="1" selected>1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                </select>
+                            </div>
+                            <div style="width: 50%;">
+                                <span class="text-capitalize fw-semibold">size: </span>
+                                <select name="qty" style="width: 30%;" id="quantity">
+                                    <option value="7">7</option>
+                                    <option value="7.5">7.5</option>
+                                    <option value="8">8</option>
+                                    <option value="8.5">8.5</option>
+                                    <option value="9">9</option>
+                                    <option value="9.5">9.5</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="11.5">11.5</option>
+                                    <option value="12">12</option>
+                                    <option value="12.5">12.5</option>
+                                    <option value="13">13</option>
+                                </select>
+                            </div>
                         </div>
-                        <div style="width: 50%;">
-                            <span class="text-capitalize fw-semibold">size: </span>
-                            <select name="qty" style="width: 30%;" id="quantity">
-                                <option value="7">7</option>
-                                <option value="7.5">7.5</option>
-                                <option value="8">8</option>
-                                <option value="8.5">8.5</option>
-                                <option value="9">9</option>
-                                <option value="9.5">9.5</option>
-                                <option value="10">10</option>
-                                <option value="11">11</option>
-                                <option value="11.5">11.5</option>
-                                <option value="12">12</option>
-                                <option value="12.5">12.5</option>
-                                <option value="13">13</option>
-                             
-
-                                
-                            </select>
+                         <div>
+                            <p class="mt-3">
+                                <span class="text-capitalize fw-semibold pe-1">type: </span>
+                                <span class="text-capitalize fw-bold fs-6">bougers</span>
+                            </p>
+                        </div>
+                        <div>
+                            <button class="btn-1" type="submit">add to cart</button>
+                            <button class="btn-2" type="submit">buy now</button>
                         </div>
                     </form>
-                    <div>
-                        <p class="mt-3">
-                            <span class="text-capitalize fw-semibold pe-1">type: </span>
-                            <span class="text-capitalize fw-bold fs-6">bougers</span>
-                        </p>
+                    <div class="my-4">
+                        <p class="text-capitalize text-dark fw-bold fs-5">delivery options: </p>
+                        <ul class="payment fw-semibold">
+                            <li><span><i class="fa-solid fa-credit-card pe-2"></i></span>credit card</li>
+                            <li><span><i class="fa-solid fa-credit-card pe-2"></i></span>debit card</li>
+                            <li><span><i class="fa-solid fa-building-columns pe-2"></i></span>net banking</li>
+                            <li class="text-uppercase"><span><i class="fa-brands fa-cc-amazon-pay pe-2"></i></span> upi id</li>
+                            <li><span><i class="fas fa-shipping-fast pe-2"></i></span>cash on delivery</li>
+                        </ul>
                     </div>
+                    <div>
+                        <p class="mt-4 text-capitalize fw-bold fs-5">product detail: </p>
+                        <p class="text-capitalize">Step your style game up a notch with the ever-elegant FIRST from CAMPUS. The trendy all-white sneaks are enhanced with the stylish orange patterns on top.</p>
+                        <div class="row">
+                            <div class="col-5 mb-3" style="border-bottom: 1px dashed #c3bebe;">
+                                <p class="fw-medium fs-6 text-capitalize">style code: </p>
+                                <p class="text-uppercase fw-bold">h53dsr</p>
+                            </div>
+                            <div class="col-5 offset-md-2 mb-3" style="border-bottom: 1px dashed #c3bebe;">
+                                <p class="fw-medium fs-6 text-capitalize">pattern: </p>
+                                <p class="text-capitalize fw-bold fs-6">Patterned</p>
+                            </div>
+                            <div class="col-5 mb-3" style="border-bottom: 1px dashed #c3bebe;">
+                                <p class="fw-medium fs-6 text-capitalize">brand: </p>
+                                <p class="text-capitalize fw-bold">rebook</p>
+                            </div>
+                            <div class="col-5 offset-md-2 mb-3" style="border-bottom: 1px dashed #c3bebe;">
+                                <p class="fw-medium fs-6 text-capitalize">sub-brand: </p>
+                                <p class="text-capitalize fw-bold fs-6">rebook</p>
+                            </div>
+                            <div class="col-5 mb-3" style="border-bottom: 1px dashed #c3bebe;">
+                                <p class="fw-medium fs-6 text-capitalize">brand: </p>
+                                <p class="text-capitalize fw-bold">rebook</p>
+                            </div>
+                            <div class="col-5 offset-md-2 mb-3" style="border-bottom: 1px dashed #c3bebe;">
+                                <p class="fw-medium fs-6 text-capitalize">sub-brand: </p>
+                                <p class="text-capitalize fw-bold fs-6">rebook</p>
+                            </div>
+                            <div class="col-5 mb-3" style="border-bottom: 1px dashed #c3bebe;">
+                                <p class="fw-medium fs-6 text-capitalize">material: </p>
+                                <p class="text-capitalize fw-bold">87% Recycled Polyester and 13% Elastane</p>
+                            </div>
+                        </div>
+                    </div>
+                   
                 </div>
             </div>
         </div>
     </section>
+    <section class="carousal-owl my-5">
+        <div class="container-fluid my-4">
+            <p class="fs-3 fw-bold text-capitalize mt-5">related products:</p>
+            <div class="owl-carousel owl-theme">
+                <div class="row">
+                    <div class="item">
+                            <div class="col">
+                              <div class="card">
+                                <img src="footwear-detail/IMG-646e324a5291f2.90101984.jpg" class="card-img-top high" alt="...">
+                                <div class="card-body">
+                                  <p class="card-title naow text-capitalize fs-6 fw-semibold">Shaire Men's Slip On Casual Shoes Comfort Fashion Loafers Driving Shoes for Men</p>
+                                  <p class="text-capitalize fw-semibold card-text mb-0" style="font-size: 14px;">
+                                    rating : 4.5
+                                    <span><i class="fa-solid fa-star color"></i></span>
+                                    <span><i class="fa-solid fa-star color"></i></span>
+                                    <span><i class="fa-solid fa-star color"></i></span>
+                                    <span><i class="fa-solid fa-star color"></i></span>
+                                    <span><i class="fa-solid fa-star-half-stroke color"></i></span>
+                                </p>
+                                <p class="mb-0"><span class="text-capitalize fw-semibold"
+                                    style="font-size: 12px; color: #727272;">price:</span>
+                                <span class="price fs-6">$114.99</span>
+                            </p>
+                              </div>
+                            </div>
+                    </div>
+                </div>
+               
+               
+            </div>
+
+        </div>
+    </section>
+    <section style="background-color: #076493;">
+       <div class="container-fluid d-flex justify-content-around text-capitalize text-light fw-bold py-2">
+            <p class="m-0"><span><i class="fa-sharp fa-solid fa-arrow-right-arrow-left pe-2"></i></span>30 day return policy</p>
+            <p class="m-0"><span><i class="fas fa-shipping-fast pe-2"></i></span>fast delivery</p>
+            <p class="m-0 text-lowercase"><span><i class="fa-solid fa-envelope pe-2"></i></span>ansariaavez1234@gmail.com</p>
+    </section>
+    
+        <section class="footer text-light" style="background-color: #1d1d1d;">
+            <div class="container-fluid py-5 px-4">
+              <div class="row">
+                <div class="col-lg-3">
+                  <p class="fs-4 fw-bold text-uppercase">download</p>
+                  <p class="fs-6 fw-semibold text-capitalize"> downloads our app for android and ios</p>
+                  <div>
+                    <div>
+                      <img src="images/brand/footer.png" width="150" class="text-center mb-3" alt="apple logo">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-5">
+                  <p class="fs-4 fw-bold text-uppercase">shopping</p>
+                  <p class="fs-6 fw-semibold text-capitalize">our purpose is to give shoppers a memorable and enjoyable
+                    experience while providing them with a wide range of high-quality products and exceptional customer service.
+                  </p>
+                 
+                </div>
+                <div class="col-lg-2">
+                  <p class="fs-4 fw-bold text-uppercase">links</p>
+                  <ul class="fs-6 fw-semibold text-capitalize" style="list-style: none;padding: 0;">
+                    <li>cupons</li>
+                    <li>blog posts</li>
+                    <li>return policy</li>
+                    <li>join us</li>
+                  </ul>
+                 
+                </div>
+                <div class="col-lg-2">
+                  <p class="fs-4 fw-bold text-uppercase">follow us</p>
+                  <ul class="fs-6 fw-semibold text-capitalize" style="list-style: none;padding: 0;">
+                    <li>facebook</li>
+                    <li>instagram</li>
+                    <li>twitter</li>
+                    <li>linkedin</li>
+                  </ul>
+                 
+                </div>
+              </div>
+            </div>
+          </section>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="owl-carousal.js"></script>
 
 </body>
 

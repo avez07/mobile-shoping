@@ -58,7 +58,7 @@ echo '<div class="col-lg-3 col-6">
                     off</span><span class="fs-6 text-danger ms-2 fw-semibold">Deal</span></p>
                 <p><span class="fw-semibold text-right">'.$row['PRICE'].'</span></p>
               </div>
-              <p>'.$row['FOOTWEAR_NAME'].'</p>
+              <p class ="naow">'.$row['FOOTWEAR_NAME'].'</p>
             </div>
           </div></a>
         </div>';
