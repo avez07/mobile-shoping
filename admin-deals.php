@@ -13,11 +13,11 @@ include "html-head.php"
                     <ul class="add-links">
                         <li><span><a href="shop.php" class="text-dark" style="text-decoration: none;"><i
                                         class="fa-solid fa-house pe-2"></i></span>home</a></li>
-                        <li class="active"><span><a href="adreress.html" class="text-dark"
+                        <li class="active"><span><a href="admin-deals.php" class="text-dark"
                                     style="text-decoration: none;"><i
                                         class="fa-solid fa-location-dot pe-2 active-2"></i></span>todays deals</a></li>
                         <li><span><i class="fa-solid fa-briefcase pe-2"></i></span>orders</li>
-                        <li><span><a href="change-password.html" class="text-dark" style="text-decoration: none;"><i
+                        <li><span><a href="footear-detail.php" class="text-dark" style="text-decoration: none;"><i
                                         class="fa-solid fa-key pe-2"></i></span>shoes data</a></li>
                         <li><span><i class="fa-sharp fa-solid fa-right-from-bracket pe-2"></i></span>logout</li>
                     </ul>

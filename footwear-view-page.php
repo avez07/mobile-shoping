@@ -1,25 +1,9 @@
-<?php session_start();
-include "partial/login-logics.php";
+<?php
+session_start();
+include  "html-head.php";
 ?>
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="style.css">
-</head>
-
 <body>
-  <!-- navbar 1 -->
-  <section class="top-nav" style="background-color: #03202f;">
+<section class="top-nav" style="background-color: #03202f;">
     <nav class="navbar navbar-expand text-light">
       <div class="container-fluid justify-content-around">
         <?php echo '<a class="navbar-brand text-light" href="#">'.$_SESSION["customer_name"].'</a>';?>
@@ -51,23 +35,14 @@ include "partial/login-logics.php";
           </div>
         </a>
 
-        <?php
-        if ($user) {
-          echo '<a href="adreress.html"><span><i class="fa-solid fa-user pe-2"></i></span>account</a>';
-        }
-       
-        if ($admin) {
-       
-        echo ' <a href="admin-deals.php"><span><i class="fa-solid fa-user pe-2"></i></span>account</a>';
-        }
-        ?>
+
+        <a href="adreress.html"><span><i class="fa-solid fa-user pe-2"></i></span>account</a>
         <a href="#"><span><i class="fa-solid fa-circle-question pe-2"></i></span> about</a>
         <a href="#"><span><i class="fa-solid fa-envelope pe-2"></i></span> contact</a>
       </div>
   </section>
   <!-- navbar 2 -->
-  <section style="background-color: #076493;
-  ">
+  <section style="background-color: #076493;">
     <nav class="navbar navbar-expand  p-0 ps-2 text-capitalize fw-semibold">
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -130,13 +105,13 @@ include "partial/login-logics.php";
         <div class="underline"></div>
       </div>
       <div class="sale-img row">
-        <?php include "home-view/deals-view-page.php" ?>
-
-       
+       <?php
+       include "click-view-back/footwear-view-page-show.php"
+       ?>
       </div>
     </div>
+  </section>
 
- <?php include "click-view-back/footwear-view-page-click.php" ?>
   <section id="brands">
     <div class="container-fluid py-3 px-lg-5">
       <div class="head py-5">
@@ -220,11 +195,10 @@ include "partial/login-logics.php";
       </div>
     </div>
   </section>
+  
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
     crossorigin="anonymous"></script>
   <script src="index.js"></script>
 </body>
-
-</html>
