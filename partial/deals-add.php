@@ -5,6 +5,12 @@
     $foot_deal_img = $_FILES["foot-pic"];
     $type = $_POST["type"];
     $categories = $_POST["categories"];
+    $detail = $_POST["product-detail"];
+    $style_code = $_POST["style"];
+    $pattern = $_POST["pattern"];
+    $brand = $_POST["brand"];
+    $sub_brand = $_POST["sub-brand"];
+    $material = $_POST["material"];
     $discount = $_POST["discount"];
     $price = $_POST["price"];
 
@@ -32,18 +38,24 @@
 
 
 
-    $conn->query("CREATE TABLE IF NOT EXISTS user_deals_768 (
+   $conn->query("CREATE TABLE IF NOT EXISTS user_deals_768 (
         id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
         FOOTWEAR_NAME varchar(30) NOT NULL,
         FOOT_IMG VARCHAR(50) NOT NULL,
         TYPE_ VARCHAR(15) NOT NULL,
         CATEGORIES VARCHAR(15) NOT NULL,
-        DISCOUNT varchar(5) NOT NULL,
+        PRODUCT_DETAIL VARCHAR(100) NOT NULL,
+        STYLE_CODE VARCHAR(15) NOT NULL,
+        PATTERN VARCHAR(25) NOT NULL,
+        BRAND VARCHAR(30) NOT NULL,
+        SUB_BRAND VARCHAR(35) NOT NULL,
+        MATERIAL VARCHAR(50) NOT NULL,
+        DISCOUNT VARCHAR(50) NOT NULL,
         PRICE varchar(10) NOT NULL
     );");
 
-    $query = $conn->prepare("INSERT INTO user_deals_768 (FOOTWEAR_NAME, FOOT_IMG, TYPE_, CATEGORIES, DISCOUNT, PRICE) VALUES (?, ?, ?, ?, ?, ?)");
-    $query->bind_param("ssssss", $foot_name, $new_foot_img_name, $type, $categories, $discount, $price);
+    $query = $conn->prepare("INSERT INTO user_deals_768 (FOOTWEAR_NAME, FOOT_IMG, TYPE_, CATEGORIES, PRODUCT_DETAIL, STYLE_CODE, PATTERN, BRAND, SUB_BRAND, MATERIAL ,  DISCOUNT, PRICE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+    $query->bind_param("ssssssssssss", $foot_name, $new_foot_img_name, $type, $categories, $detail, $style_code, $pattern, $brand, $sub_brand, $material, $discount, $price);
     $query->execute();
 
     if ($query) {

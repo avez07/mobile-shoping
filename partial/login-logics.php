@@ -26,6 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $row = $result->fetch_assoc();
         $_SESSION['customer_name'] = $row['CUSTOMER_NAME'];
         $user = true;
+        $admin = false;
         // Redirect the user to the admin dashboard
         header("Location:./shop.php");
         exit();
@@ -35,6 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } 
     if ($_SESSION['user_name'] == "admin" &&  $_SESSION['password'] == "password") {
         $admin = true;
+        $user = false;
         $_SESSION['customer_name'] = "AAVEZ";
         header("Location: ./shop.php");
         exit();

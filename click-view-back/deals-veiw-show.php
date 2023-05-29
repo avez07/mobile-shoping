@@ -28,7 +28,7 @@
     if ($sql_result->num_rows > 0) {
       while ($row = $sql_result->fetch_assoc()) {
 echo '<div class="col-lg-3 col-6">
-          <div class="card my-3">
+          <div class="card hover my-3">
             <img src="deals-image-upload/'.$row['FOOT_IMG'].'" class="card-img-top high" alt="...">
             <div class="card-body">
               <div class="d-flex justify-content-between">

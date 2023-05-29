@@ -43,7 +43,7 @@ if (!$result) {
   if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
       echo '<div class="col-md-3">
-              <div class="card">
+             <a href = "single-view.php?id='.$row['id'].'"><div class="card">
                 <img src="all-footwear-detail/'.$row["FOOT_IMG"].'" class="card-img-top high" alt="...">
                 <div class="card-body">
                   <p class="card-title naow text-capitalize fs-6 fw-semibold">'.$row["FOOTWEAR_NAME"].'</p>
@@ -60,7 +60,7 @@ if (!$result) {
                     <span class="price fs-6">'.$row["PRICE"].'</span>
                   </p>
                 </div>
-              </div>
+              </div></a>
             </div>';
     }
   } else {

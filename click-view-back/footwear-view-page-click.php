@@ -20,7 +20,7 @@ $brogues = "Brogues";
       <div class="featured-img row">
         <div class="col-lg-4">
           <?php
-       echo   '<a href = "footwear-view-page.php?categories='.$men.'"><div class="card border-0 bg-body-light">
+       echo   '<a href = "footwear-view-page.php?categories='.$men.'" style = "text-decoration : none;"><div class="card border-0 onhover bg-body-light">
             <img src="images/men.jpg" class="card-img-top" height="300" alt="...">
             <div class="card-body">
               <p class="fw-semibold fs-5 text-capitalize">men</p>
@@ -30,7 +30,7 @@ $brogues = "Brogues";
         </div>
         <div class="col-4">
         <?php
-       echo   '<a href = "footwear-view-page.php?categories='.$women.'"><div class="card border-0 bg-body-light">
+       echo   '<a href = "footwear-view-page.php?categories='.$women.'" style = "text-decoration : none;"><div class="card border-0 onhover bg-body-light">
             <img src="images/women.jpg" class="card-img-top" height="300" alt="...">
             <div class="card-body">
               <p class="fw-semibold fs-5 text-capitalize">women</p>
@@ -40,7 +40,7 @@ $brogues = "Brogues";
         </div>
         <div class="col-lg-4">
         <?php
-       echo   '<a href = "footwear-view-page.php?categories='.$kids.'"><div class="card border-0 bg-body-light">
+       echo   '<a href = "footwear-view-page.php?categories='.$kids.'" style = "text-decoration : none;"><div class="card border-0 onhover bg-body-light">
             <img src="images/kids.avif" class="card-img-top" height="300" alt="...">
             <div class="card-body">
               <p class="fw-semibold fs-5 text-capitalize">kids</p>
@@ -62,7 +62,7 @@ $brogues = "Brogues";
       <div class="featured-img row">
       <div class="col-lg-3">
         <?php
-       echo   '<a href = "footwear-view-page.php?type='.$loffers.'"><div class="card border-0 bg-body-light">
+       echo   '<a href = "footwear-view-page.php?type='.$loffers.'" style = "text-decoration : none;"><div class="card border-0 onhover bg-body-light">
             <img src="images/featured-1.webp" class="card-img-top" height="300" alt="...">
             <div class="card-body">
               <p class="fw-semibold fs-5 text-capitalize">loffers</p>
@@ -72,7 +72,7 @@ $brogues = "Brogues";
         </div>
         <div class="col-lg-3 col-6">
         <?php
-       echo   '<a href = "footwear-view-page.php?type='.$seakers.'"><div class="card border-0 bg-body-light">
+       echo   '<a href = "footwear-view-page.php?type='.$seakers.'" style = "text-decoration : none;"><div class="card border-0 onhover bg-body-light">
             <img src="images/seakers.jpg" class="card-img-top" height="300" alt="...">
             <div class="card-body">
               <p class="fw-semibold fs-5 text-capitalize">seakers</p>
@@ -82,7 +82,7 @@ $brogues = "Brogues";
         </div>
         <div class="col-lg-3 col-6">
         <?php
-       echo   '<a href = "footwear-view-page.php?type='.$boots.'"><div class="card border-0 bg-body-light">
+       echo   '<a href = "footwear-view-page.php?type='.$boots.'" style = "text-decoration : none;"><div class="card border-0 onhover bg-body-light">
             <img src="images/boots.webp" class="card-img-top" height="300" alt="...">
             <div class="card-body">
               <p class="fw-semibold fs-5 text-capitalize">boots</p>
@@ -93,7 +93,7 @@ $brogues = "Brogues";
         
         <div class="col-lg-3 col-6">
         <?php
-       echo   '<a href = "footwear-view-page.php?type='.$brogues.'"><div class="card border-0 bg-body-light">
+  echo   '<a href = "footwear-view-page.php?type='.$brogues.'"style = "text-decoration : none;"><div class="card border-0 onhover bg-body-light">
             <img src="images/Brogues.jpg" class="card-img-top" height="300" alt="...">
             <div class="card-body">
               <p class="fw-semibold fs-5 text-capitalize">Brogues</p>

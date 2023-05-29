@@ -13,12 +13,12 @@ include "html-head.php"
                     <ul class="add-links">
                         <li><span><a href="shop.php" class="text-dark" style="text-decoration: none;"><i
                                         class="fa-solid fa-house pe-2"></i></span>home</a></li>
-                        <li class="active"><span><a href="admin-deals.php" class="text-dark"
+                        <li><span><a href="admin-deals.php" class="text-dark"
                                     style="text-decoration: none;"><i
-                                        class="fa-solid fa-location-dot pe-2 active-2"></i></span>todays deals</a></li>
+                                        class="fa-solid fa-location-dot pe-2"></i></span>todays deals</a></li>
                         <li><span><i class="fa-solid fa-briefcase pe-2"></i></span>orders</li>
-                        <li><span><a href="/footear-detail.php" class="text-dark" style="text-decoration: none;"><i
-                                        class="fa-solid fa-key pe-2"></i></span>shoes data</a></li>
+                        <li class="active"><span><a href="/footear-detail.php" class="text-dark" style="text-decoration: none;"><i
+                                        class="fa-solid fa-key pe-2 active-2"></i></span>shoes data</a></li>
                         <li><span><i class="fa-sharp fa-solid fa-right-from-bracket pe-2"></i></span>logout</li>
                     </ul>
 
@@ -61,6 +61,30 @@ include "html-head.php"
                                     <option value="women">Women</option>
                                     <option value="kids">Kids</option>
                                     <select>
+                            </div>
+                            <div class="col-md-6 py-4 text-capitalize fw-semibold brown">
+                                <label for="price">style code</label>
+                                <input type="text" class="form-control" id="add-form" name="style">
+                            </div>
+                            <div class="col-md-6 py-4 text-capitalize fw-semibold brown">
+                                <label for="price">product detail</label>
+                                <input type="text" class="form-control" id="add-form" name="product-detail">
+                            </div>
+                            <div class="col-md-6 py-4 text-capitalize fw-semibold brown">
+                                <label for="price">pattern</label>
+                                <input type="text" class="form-control" id="add-form" name="pattern">
+                            </div>
+                            <div class="col-md-6 py-4 text-capitalize fw-semibold brown">
+                                <label for="price">brand</label>
+                                <input type="text" class="form-control" id="add-form" name="brand">
+                            </div>
+                            <div class="col-md-6 py-4 text-capitalize fw-semibold brown">
+                                <label for="price">sub brand</label>
+                                <input type="text" class="form-control" id="add-form" name="sub-brand">
+                            </div>
+                            <div class="col-md-6 py-4 text-capitalize fw-semibold brown">
+                                <label for="price">material</label>
+                                <input type="text" class="form-control" id="add-form" name="material">
                             </div>
 
                             <div class="col-md-6 py-4 text-capitalize fw-semibold brown">

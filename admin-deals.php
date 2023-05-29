@@ -63,7 +63,30 @@ include "html-head.php"
                                     <option value="kids">Kids</option>
                                     <select>
                             </div>
-
+                            <div class="col-md-6 py-4 text-capitalize fw-semibold brown">
+                                <label for="price">style code</label>
+                                <input type="text" class="form-control" id="add-form" name="style">
+                            </div>
+                            <div class="col-md-6 py-4 text-capitalize fw-semibold brown">
+                                <label for="price">product detail</label>
+                                <input type="text" class="form-control" id="add-form" name="product-detail">
+                            </div>
+                            <div class="col-md-6 py-4 text-capitalize fw-semibold brown">
+                                <label for="price">pattern</label>
+                                <input type="text" class="form-control" id="add-form" name="pattern">
+                            </div>
+                            <div class="col-md-6 py-4 text-capitalize fw-semibold brown">
+                                <label for="price">brand</label>
+                                <input type="text" class="form-control" id="add-form" name="brand">
+                            </div>
+                            <div class="col-md-6 py-4 text-capitalize fw-semibold brown">
+                                <label for="price">sub brand</label>
+                                <input type="text" class="form-control" id="add-form" name="sub-brand">
+                            </div>
+                            <div class="col-md-6 py-4 text-capitalize fw-semibold brown">
+                                <label for="price">material</label>
+                                <input type="text" class="form-control" id="add-form" name="material">
+                            </div>
                             <div class="col-md-6 py-4 text-capitalize fw-semibold brown">
                                 <label for="discount">discount (in percentage)</label>
                                 <input type="text" class="form-control" id="add-form" name="discount">

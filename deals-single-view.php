@@ -1,116 +1,98 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php session_start();
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
-        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
-        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style.css">
-</head>
+include "html-head.php";
+include "click-view-back/deals-single-view-show.php";
+include "partial/login-logics.php";
+?>
 
 <body>
-    <section class="top-nav" style="background-color: #03202f;">
-        <nav class="navbar navbar-expand text-light">
-            <div class="container-fluid justify-content-around">
-                <?php echo '<a class="navbar-brand text-light" href="#">'.$_SESSION["customer_name"].'</a>';?>
+<section class="top-nav" style="background-color: #03202f;">
+    <nav class="navbar navbar-expand text-light">
+      <div class="container-fluid justify-content-around">
+        <?php echo '<a class="navbar-brand text-light" href="#">'.$_SESSION["customer_name"].'</a>';?>
 
-                <form class="d-flex" style="width: 70%;" role="search">
-                    <input class="form-control search-bar" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn search" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-                </form>
-                <div class="ms-2"><i class="fa-solid fa-cart-plus fs-2"></i>CART</div>
+        <form class="d-flex" style="width: 70%;" role="search">
+          <input class="form-control search-bar" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn search" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+        <div class="ms-2"><i class="fa-solid fa-cart-plus fs-2"></i>CART</div>
 
-            </div>
-        </nav>
-    </section>
-    <!-- sidnavbar  -->
-    <section class="navbar-s" id="sidenav">
-        <div class="container-fluid p-0">
-
-            <div id="mySidenav" class="sidenav">
-
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <div>
-                    <p class="text-light text-uppercase fs-5  py-4 ps-5">shoe shop</p>
-                </div>
-                <a href="#"><span><i class="fa-solid fa-house pe-2"></i></span> home</a>
-                <a href="#" onclick="toggleNav2() "><span><i class="fa-solid fa-bars-staggered pe-2"></i></span> product
-                    <div class="drop" id="drop">
-                        <a href="#"><span><i class="fa-solid fa-user pe-2"></i></span>men</a>
-                        <a href="#"><span><i class="fa-solid fa-circle-question pe-2"></i></span> wonem</a>
-                    </div>
-                </a>
-
-                <!-- <?php
-            if ($user) { -->
-                <!-- echo '--><a href="adreress.html"><span><i class="fa-solid fa-user pe-2"></i></span>account</a>
-                <!-- } -->
-
-                <!-- if ($admin) { -->
-
-                <!-- echo ' --><a href="admin-deals.php"><span><i
-                            class="fa-solid fa-user pe-2"></i></span>account</a><!--'; -->
-                <!-- }
-            ?> -->
-                <a href="#"><span><i class="fa-solid fa-circle-question pe-2"></i></span> about</a>
-                <a href="#"><span><i class="fa-solid fa-envelope pe-2"></i></span> contact</a>
-            </div>
-    </section>
-    <!-- navbar 2 -->
-    <section style="background-color: #076493;">
-        <nav class="navbar navbar-expand  p-0 ps-2 text-capitalize fw-semibold">
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link text-light" aria-current="page" href="#"><span onclick="openNav()">&#9776;
-                                All</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-light" aria-current="page" href="#deal">today's deals</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-light" href="#categories">categories</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link text-light" href="#brands">brands</a>
-                    </li>
-                </ul>
-
-            </div>
-
-        </nav>
-
+      </div>
+    </nav>
+  </section>
+  <!-- sidnavbar  -->
+  <section class="navbar-s" id="sidenav">
+    <div class="container-fluid p-0">
+     
+      <div id="mySidenav" class="sidenav">
+       
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div>
+          <p class="text-light text-uppercase fs-5  py-4 ps-5">shoe shop</p>
         </div>
-    </section>
+        <a href="#"><span><i class="fa-solid fa-house pe-2"></i></span> home</a>
+        <a href="#" onclick="toggleNav2() "><span><i class="fa-solid fa-bars-staggered pe-2"></i></span> product
+          <div class="drop" id="drop">
+            <a href="#"><span><i class="fa-solid fa-user pe-2"></i></span>men</a>
+            <a href="#"><span><i class="fa-solid fa-circle-question pe-2"></i></span> wonem</a>
+          </div>
+        </a>
+
+        <?php
+        if ($user) {
+          echo '<a href="adreress.html"><span><i class="fa-solid fa-user pe-2"></i></span>account</a>';
+        }
+       
+        if ($admin) {
+       
+        echo ' <a href="admin-deals.php"><span><i class="fa-solid fa-user pe-2"></i></span>account</a>';
+        }
+        ?>
+        <a href="#"><span><i class="fa-solid fa-circle-question pe-2"></i></span> about</a>
+        <a href="#"><span><i class="fa-solid fa-envelope pe-2"></i></span> contact</a>
+      </div>
+  </section>
+  <!-- navbar 2 -->
+  <section style="background-color: #076493;
+  ">
+    <nav class="navbar navbar-expand  p-0 ps-2 text-capitalize fw-semibold">
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link text-light" aria-current="page" href="#"><span onclick="openNav()">&#9776; All</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" aria-current="page" href="#deal">today's deals</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="#categories">categories</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link text-light" href="#brands">brands</a>
+          </li>
+        </ul>
+
+      </div>
+
+    </nav>
+
+    </div>
+  </section>
     <section class="pt-5">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-6">
-                    <div class="shoe-img sticky-sm-top">
-                        <img src="deals-image-upload/IMG-646e4156e52a54.30914338.jpg"
+                    <div class="shoe-img sticky-sm-top" style = "z-index: -1">
+                        <img src="all-footwear-detail/<?php echo $row['FOOT_IMG']; ?>"
                             style="height: 30rem; position: sticky;" class="w-100 img-fluid" alt="dhoe image">
                     </div>
                 </div>
                 <div class="col-md-5">
                     <div>
-                        <p class="fw-bold fs-5 text-capitalize">MIRAAZZURRA Women Sling Back Pumps Chunky Heels Sexy
-                            Splicing Round Toe Casual Wedding Shoes for Women Fashion Dress Shoes</p>
+                        <p class="fw-bold fs-5 text-capitalize"><?php echo $row['FOOTWEAR_NAME']; ?></p>
                     </div>
                     <div>
                         <p class="text-capitalize fw-semibold" style="font-size: 14px;">
@@ -123,16 +105,16 @@
                         </p>
                     </div>
                     <div>
-                        <p class="">
-                            <span class=" ribbon text-capitalize text-light bg-danger fw-semibold"># no 1 seller</span>
-                            <span class="text-capitalize ps-2"><a href="">in women's pumps</a></span>
+                        <p class="bactch">
+                            <span class=" ribbon text-capitalize text-light bg-danger fw-semibold"><?php echo $row['DISCOUNT'] ?></span>
+                            <span class="text-capitalize ps-2"><a href="">in <?php echo $row['CATEGORIES']; ?><span class = "text-lowercase">'s</span> pumps</a></span>
                         <div class="divider"></div>
                         </p>
                     </div>
                     <div>
                         <p><span class="text-capitalize fw-semibold"
                                 style="font-size: 17px; color: #727272;">price:</span>
-                            <span class="price ps-2">$114.99</span>
+                            <span class="price ps-2"><?php echo $row['PRICE']; ?></span>
                         </p>
                     </div>
                     <form action="">
@@ -169,7 +151,7 @@
                         <div>
                             <p class="mt-3">
                                 <span class="text-capitalize fw-semibold pe-1">type: </span>
-                                <span class="text-capitalize fw-bold fs-6">bougers</span>
+                                <span class="text-capitalize fw-bold fs-6"><?php echo $row['PRICE']; ?></span>
                             </p>
                         </div>
                         <div>
@@ -190,37 +172,29 @@
                     </div>
                     <div>
                         <p class="mt-4 text-capitalize fw-bold fs-5">product detail: </p>
-                        <p class="text-capitalize">Step your style game up a notch with the ever-elegant FIRST from
-                            CAMPUS. The trendy all-white sneaks are enhanced with the stylish orange patterns on top.
+                        <p class="text-capitalize"><?php echo $row['PRODUCT_DETAIL']; ?>
                         </p>
                         <div class="row">
                             <div class="col-5 mb-3" style="border-bottom: 1px dashed #c3bebe;">
                                 <p class="fw-medium fs-6 text-capitalize">style code: </p>
-                                <p class="text-uppercase fw-bold">h53dsr</p>
+                                <p class="text-uppercase fw-bold"><?php echo $row['STYLE_CODE']; ?></p>
                             </div>
                             <div class="col-5 offset-md-2 mb-3" style="border-bottom: 1px dashed #c3bebe;">
                                 <p class="fw-medium fs-6 text-capitalize">pattern: </p>
-                                <p class="text-capitalize fw-bold fs-6">Patterned</p>
+                                <p class="text-capitalize fw-bold fs-6"><?php echo $row['PATTERN']; ?></p>
                             </div>
                             <div class="col-5 mb-3" style="border-bottom: 1px dashed #c3bebe;">
                                 <p class="fw-medium fs-6 text-capitalize">brand: </p>
-                                <p class="text-capitalize fw-bold">rebook</p>
+                                <p class="text-capitalize fw-bold"><?php echo $row['BRAND']; ?></p>
                             </div>
                             <div class="col-5 offset-md-2 mb-3" style="border-bottom: 1px dashed #c3bebe;">
                                 <p class="fw-medium fs-6 text-capitalize">sub-brand: </p>
-                                <p class="text-capitalize fw-bold fs-6">rebook</p>
+                                <p class="text-capitalize fw-bold fs-6"><?php echo $row['SUB_BRAND']; ?></p>
                             </div>
-                            <div class="col-5 mb-3" style="border-bottom: 1px dashed #c3bebe;">
-                                <p class="fw-medium fs-6 text-capitalize">brand: </p>
-                                <p class="text-capitalize fw-bold">rebook</p>
-                            </div>
-                            <div class="col-5 offset-md-2 mb-3" style="border-bottom: 1px dashed #c3bebe;">
-                                <p class="fw-medium fs-6 text-capitalize">sub-brand: </p>
-                                <p class="text-capitalize fw-bold fs-6">rebook</p>
-                            </div>
+                           
                             <div class="col-5 mb-3" style="border-bottom: 1px dashed #c3bebe;">
                                 <p class="fw-medium fs-6 text-capitalize">material: </p>
-                                <p class="text-capitalize fw-bold">87% Recycled Polyester and 13% Elastane</p>
+                                <p class="text-capitalize fw-bold"><?php echo $row['MATERIAL']; ?></p>
                             </div>
                         </div>
                     </div>
@@ -234,30 +208,47 @@
             <p class="fs-3 fw-bold text-capitalize mt-5">related products:</p>
             <div class="owl-carousel owl-theme">
                 <div class="row">
-                    <div class="item">
-                        <div class="col">
-                            <div class="card">
-                                <img src="footwear-detail/IMG-646e324a5291f2.90101984.jpg" class="card-img-top high"
-                                    alt="...">
-                                <div class="card-body">
-                                    <p class="card-title naow text-capitalize fs-6 fw-semibold">Shaire Men's Slip On
-                                        Casual Shoes Comfort Fashion Loafers Driving Shoes for Men</p>
-                                    <p class="text-capitalize fw-semibold card-text mb-0" style="font-size: 14px;">
-                                        rating : 4.5
-                                        <span><i class="fa-solid fa-star color"></i></span>
-                                        <span><i class="fa-solid fa-star color"></i></span>
-                                        <span><i class="fa-solid fa-star color"></i></span>
-                                        <span><i class="fa-solid fa-star color"></i></span>
-                                        <span><i class="fa-solid fa-star-half-stroke color"></i></span>
-                                    </p>
-                                    <p class="mb-0"><span class="text-capitalize fw-semibold"
-                                            style="font-size: 12px; color: #727272;">price:</span>
-                                        <span class="price fs-6">$114.99</span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+    <?php
+$sql_query_1 = "SELECT * FROM `all_footwears_768` WHERE id <> ?";
+$stmt = $conn->prepare($sql_query_1);
+$stmt->bind_param("s", $id);
+$stmt->execute();
+$result = $stmt->get_result();
+
+if (!$result) {
+    echo "NO DATA IS ADDED: " . $stmt->error;
+} else {
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            echo ' <div class="item">
+            <div class="col">
+                <div class="card">
+                    <img src="all-footwear-detail/'.$row['FOOT_IMG'].'" class="card-img-top high"
+                        alt="...">
+                    <div class="card-body">
+                        <p class="card-title naow text-capitalize fs-6 fw-semibold">'.$row['FOOTWEAR_NAME'].'</p>
+                        <p class="text-capitalize fw-semibold card-text mb-0" style="font-size: 14px;">
+                            rating : 4.5
+                            <span><i class="fa-solid fa-star color"></i></span>
+                            <span><i class="fa-solid fa-star color"></i></span>
+                            <span><i class="fa-solid fa-star color"></i></span>
+                            <span><i class="fa-solid fa-star color"></i></span>
+                            <span><i class="fa-solid fa-star-half-stroke color"></i></span>
+                        </p>
+                        <p class="mb-0"><span class="text-capitalize fw-semibold"
+                                style="font-size: 12px; color: #727272;">price:</span>
+                            <span class="price fs-6">'.$row['PRICE'].'</span>
+                        </p>
                     </div>
+                </div>
+            </div>
+        </div>';
+        }
+    }
+}
+?>
+
+                   
 
 
                 </div>
@@ -325,6 +316,7 @@
         integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="owl-carousal.js"></script>
+    <script src="index.js"></script>
 
 </body>
 
