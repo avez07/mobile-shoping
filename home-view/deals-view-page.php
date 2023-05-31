@@ -33,7 +33,7 @@ if (isset($_SESSION['random_number'])) {
   $randomNumber = $_SESSION['random_number'];
 } else {
   // Generate a new random number between 1 and the number of results (excluding 4) from the query
-  $randomNumber = generateRandomNumber(1, $number_of_result);
+  $randomNumber = generateRandomNumber(0, $number_of_result);
   $_SESSION['random_number'] = $randomNumber;
  
 }

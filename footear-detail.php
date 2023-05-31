@@ -106,8 +106,5 @@ include "html-head.php"
             </div>
         </div>
         </div>
-        <script>
-            var select = document.getElementById("select").value;
-            console.log(select);
-        </script>
+      
 </body>

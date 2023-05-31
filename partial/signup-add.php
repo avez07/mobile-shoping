@@ -17,11 +17,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // LOGICS FOR UNIQUE NAME OF USER THAT CREATED A TABLE IN THE WONDERS-ORDERS DATABASE
     $str = $name;
-    $pattern = "/\s+/"; // Use a regular expression pattern to match one or more spaces
+    $pattern = "/[\s.]+/";
+    // Use a regular expression pattern to match one or more spaces
     $replace = "_";
     
     $result = preg_replace($pattern, $replace, $str);
-  $table_name = uniqid($result."_" , true);
+  $table_name = uniqid($result."_");
 
 
 

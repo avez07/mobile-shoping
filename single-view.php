@@ -44,7 +44,6 @@ include "partial/login-logics.php";
         }
        
         if ($admin) {
-       
         echo ' <a href="admin-deals.php"><span><i class="fa-solid fa-user pe-2"></i></span>account</a>';
         }
         ?>
@@ -117,7 +116,8 @@ include "partial/login-logics.php";
                             <span class="price ps-2"><?php echo $row['PRICE']; ?></span>
                         </p>
                     </div>
-                    <form action="">
+                    <form action="partial/add-to-cart-logic.php?id=<?php echo $id; ?>" method="post">
+                        <input type="hidden" class="name" name="product_name" value= "<?php echo  $row['FOOTWEAR_NAME']; ?>">
                         <div class="d-flex">
                             <div style="width: 50%;">
                                 <span class="text-capitalize fw-semibold">quantity: </span>
@@ -132,7 +132,7 @@ include "partial/login-logics.php";
                             </div>
                             <div style="width: 50%;">
                                 <span class="text-capitalize fw-semibold">size: </span>
-                                <select name="qty" style="width: 30%;" id="quantity">
+                                <select name="size" style="width: 30%;" id="quantity">
                                     <option value="7">7</option>
                                     <option value="7.5">7.5</option>
                                     <option value="8">8</option>
@@ -148,6 +148,14 @@ include "partial/login-logics.php";
                                 </select>
                             </div>
                         </div>
+                       
+                        <input type="hidden" class="name" name="product_price" value= "<?php echo  $row['PRICE']; ?>">
+                        <input type="hidden" class="name" name="type" value= "<?php echo  $row['TYPE_']; ?>">
+                        <input type="hidden" class="name" name="categries" value= "<?php echo  $row['CATEGORIES']; ?>">
+                        <input type="hidden" class="name" name="style_code" value= "<?php echo $row['STYLE_CODE']; ?>">
+                        <input type="hidden" class="name" name="brand" value= "<?php echo $row['BRAND']; ?>">
+                        <input type="hidden" class="name" name="sub_brand" value= "<?php echo $row['SUB_BRAND']; ?>">
+                        <input type="hidden" class="name" name="material" value= "<?php echo $row['MATERIAL']; ?>">
                         <div>
                             <p class="mt-3">
                                 <span class="text-capitalize fw-semibold pe-1">type: </span>
