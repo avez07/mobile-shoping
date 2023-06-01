@@ -21,10 +21,10 @@
             </div>
             <div class="tabular d-flex justify-content-center align-items-center">
                 <ul class="add-links">
-                    <li><span><a href="shop.html" class="text-dark" style="text-decoration: none;"><i class="fa-solid fa-house pe-2"></i></span>home</a></li>
-                    <li><span><a href="adreress.html" class="text-dark" style="text-decoration: none;"><i class="fa-solid fa-location-dot pe-2"></i></span>my address</a></li>
-                    <li><span><i class="fa-solid fa-briefcase pe-2"></i></span>my order</li>
-                    <li class="active"><span><a href="change-password.html" class="text-dark" style="text-decoration: none;"><i class="fa-solid fa-key pe-2 active-2"></i></span>change password</a></li>
+                    <li><span><a href="shop.php" class="text-dark" style="text-decoration: none;"><i class="fa-solid fa-house pe-2"></i></span>home</a></li>
+                    <li><span><a href="adreress.php" class="text-dark" style="text-decoration: none;"><i class="fa-solid fa-location-dot pe-2"></i></span>my address</a></li>
+                    <li><span><a href="my-order.php.php" class="text-dark" style="text-decoration: none;"><i class="fa-solid fa-briefcase pe-2"></i></span>my order</a></li>
+                    <li class="active"><span><a href="change-password.php" class="text-dark" style="text-decoration: none;"><i class="fa-solid fa-key pe-2 active-2"></i></span>change password</a></li>
                     <li><span><i class="fa-sharp fa-solid fa-right-from-bracket pe-2"></i></span>logout</li>
                 </ul>
                 

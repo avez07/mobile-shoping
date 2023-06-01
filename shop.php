@@ -53,7 +53,7 @@ include "partial/login-logics.php";
 
         <?php
         if ($user) {
-          echo '<a href="adreress.html"><span><i class="fa-solid fa-user pe-2"></i></span>account</a>';
+          echo '<a href="adreress.php"><span><i class="fa-solid fa-user pe-2"></i></span>account</a>';
         }
        
         if ($admin) {
@@ -77,7 +77,7 @@ include "partial/login-logics.php";
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-light" aria-current="page" href="#deal">today's deals</a>
+            <a class="nav-link text-light" aria-current="page" href="footwear-view-page.php">today's deals</a>
           </li>
           <li class="nav-item">
             <a class="nav-link text-light" href="#categories">categories</a>

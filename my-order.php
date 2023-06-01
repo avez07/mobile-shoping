@@ -10,19 +10,15 @@ include "html-head.php"
                     <img src="images/default-profile.png" class="img-fluid" alt="">
                 </div>
                 <div class="tabular d-flex justify-content-center align-items-center">
-                    <ul class="add-links">
-                        <li><span><a href="shop.php" class="text-dark" style="text-decoration: none;"><i
-                                        class="fa-solid fa-house pe-2"></i></span>home</a></li>
-                        <li class="active"><span><a href="admin-deals.php" class="text-dark"
-                                    style="text-decoration: none;"><i
-                                        class="fa-solid fa-location-dot pe-2 active-2"></i></span>todays deals</a></li>
-                        <li><span><i class="fa-solid fa-briefcase pe-2"></i></span>orders</li>
-                        <li><span><a href="footear-detail.php" class="text-dark" style="text-decoration: none;"><i
-                                        class="fa-solid fa-key pe-2"></i></span>shoes data</a></li>
-                        <li><span><i class="fa-sharp fa-solid fa-right-from-bracket pe-2"></i></span>logout</li>
-                    </ul>
-
-                </div>
+                <ul class="add-links">
+                    <li><span><a href="shop.php" class="text-dark" style="text-decoration: none;"><i class="fa-solid fa-house pe-2"></i></span>home</a></li>
+                    <li><span><a href="adreress.php" class="text-dark" style="text-decoration: none;"><i class="fa-solid fa-location-dot pe-2"></i></span>my address</a></li>
+                    <li class="active"><span><a href="my-order.php.php" class="text-dark" style="text-decoration: none;"><i class="fa-solid fa-briefcase pe-2 active-2"></i></span>my order</a></li>
+                    <li><span><a href="change-password.php" class="text-dark" style="text-decoration: none;"><i class="fa-solid fa-key pe-2"></i></span>change password</a></li>
+                    <li><span><i class="fa-sharp fa-solid fa-right-from-bracket pe-2"></i></span>logout</li>
+                </ul>
+                
+            </div>
             </div>
             <div class="address-info">
                 <div class="tabular-add">

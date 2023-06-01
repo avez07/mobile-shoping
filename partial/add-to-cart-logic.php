@@ -2,6 +2,7 @@
 session_start();
 $id = $_GET["id"];
 
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     include "../config.php";
     
@@ -39,7 +40,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
               VALUES ('$product_name', '$product_img', '$quantity', '$size', '$type', '$categories', '$price', '$code', '$brand', '$sub_brand', '$material')";
 
     if ($conn->query($query) === TRUE) {
-       header("location: ../single-view.php?id=$id");
+        if (isset($_GET['t'])) {
+            $t = $_GET['t'];
+            header("location: ../single-view.php?id=$id&t=$t");
+        } else{
+            header("location: ../single-view.php?id=$id");
+        }
+      
     } else {
         echo "Error inserting record: " . $conn->error;
     }

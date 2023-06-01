@@ -1,3 +1,6 @@
+<script>
+    alert("do you really want to delete")
+</script>
 <?php
 session_start();
 include "../config.php";

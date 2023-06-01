@@ -17,9 +17,10 @@ if (is_bool($sql_result) && !$sql_result) {
     echo "NO PRODUCT IS ADD IN THE CART";
 } elseif ($sql_result->num_rows > 0) {
     echo '
+   
     <table class="notes-table" style="width:98%; text-align: center">
         <thead>
-            <tr>
+            <tr class = "sticky-top">
                 <th style="width: 7%;" class="ps-1">SR.NO</th>
                 <th class="text-start ps-3" style="width: 10%;">IMAGE</th>
                 <th class="text-start ps-3" style="width: 45%;">PRODUCT NAME</th>
@@ -30,7 +31,7 @@ if (is_bool($sql_result) && !$sql_result) {
             </tr>
         </thead>
         <tbody>
-        <div style="width: 100%; text-align: center">';
+        ';
 
     while ($row = $sql_result->fetch_assoc()) {
         echo '<tr class= "hover-back">';

@@ -16,6 +16,9 @@
 <?php
 include "config.php";
 if (isset($_GET["categories"]) || isset($_GET["type"])) {
+  echo '<script>
+  document.getElementById("head").innerHTML = "products"
+</script>';
 
 if (isset($_GET["categories"])) {
   $categories = $_GET["categories"];
@@ -44,7 +47,7 @@ if (!$result) {
   if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
       echo '<div class="col-md-3">
-             <a href = "single-view.php?id='.$row['id'].'"><div class="card">
+             <a href = "single-view.php?id='.$row['id'].'" style ="text-decoration: none"><div class="card">
                 <img src="all-footwear-detail/'.$row["FOOT_IMG"].'" class="card-img-top high" alt="...">
                 <div class="card-body">
                   <p class="card-title naow text-capitalize fs-6 fw-semibold">'.$row["FOOTWEAR_NAME"].'</p>
@@ -94,6 +97,9 @@ if (!$result) {
              </div>
            </div></a>
          </div>';
+         echo '<script>
+         document.getElementById("head").innerHTML = "deals of the day"
+       </script>';
        }
    } 
    }

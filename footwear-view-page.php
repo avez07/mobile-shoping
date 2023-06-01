@@ -1,6 +1,7 @@
 <?php
 session_start();
 include  "html-head.php";
+include "partial/login-logics.php"
 ?>
 <body>
 <section class="top-nav" style="background-color: #03202f;">
@@ -34,9 +35,16 @@ include  "html-head.php";
             <a href="#"><span><i class="fa-solid fa-circle-question pe-2"></i></span> wonem</a>
           </div>
         </a>
-
-
-        <a href="adreress.html"><span><i class="fa-solid fa-user pe-2"></i></span>account</a>
+        <?php
+        if ($user) {
+          echo '<a href="adreress.php"><span><i class="fa-solid fa-user pe-2"></i></span>account</a>';
+        }
+       
+        if ($admin) {
+       
+        echo ' <a href="admin-deals.php"><span><i class="fa-solid fa-user pe-2"></i></span>account</a>';
+        }
+        ?>
         <a href="#"><span><i class="fa-solid fa-circle-question pe-2"></i></span> about</a>
         <a href="#"><span><i class="fa-solid fa-envelope pe-2"></i></span> contact</a>
       </div>
@@ -101,7 +109,7 @@ include  "html-head.php";
   <section id="deal">
     <div class="container-fluid py-3 px-lg-5">
       <div class="head py-5">
-        <p class="fs-5 text-capitalize fw-semibold text-center mb-1">deal of the day</p>
+        <p class="fs-5 text-capitalize fw-semibold text-center mb-1" id ="head">deal of the day</p>
         <div class="underline"></div>
       </div>
       <div class="sale-img row">
