@@ -28,8 +28,8 @@
     if ($sql_result->num_rows > 0) {
       while ($row = $sql_result->fetch_assoc()) {
 echo '<div class="col-lg-3 col-6">
-          <div class="card hover my-3">
-            <img src="deals-image-upload/'.$row['FOOT_IMG'].'" class="card-img-top high" alt="...">
+          <a href = "single-view.php?t=deal&id='.$row['id'].'"style ="text-decoration: none"><div class="card hover my-3">
+            <img src="all-footwear-detail/'.$row['FOOT_IMG'].'" class="card-img-top high" alt="...">
             <div class="card-body">
               <div class="d-flex justify-content-between">
                 <p class="card-text"><span class="fs-6 bg-danger fw-semibold px-2 py-1 text-light">Up to '.$row['DISCOUNT'].'
@@ -38,7 +38,7 @@ echo '<div class="col-lg-3 col-6">
               </div>
               <p>'.$row['FOOTWEAR_NAME'].'</p>
             </div>
-          </div>
+          </div></a>
         </div>';
       }
   } 

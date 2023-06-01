@@ -116,7 +116,7 @@ include "partial/login-logics.php";
                             <span class="price ps-2"><?php echo $row['PRICE']; ?></span>
                         </p>
                     </div>
-                    <form action="partial/add-to-cart-logic.php?id=<?php echo $id; ?>" method="post">
+                    <form action="partial/add-to-cart-logic.php?id=<?php echo $id; ?>" method="post" enctype="multipart/form-data">
                         <input type="hidden" class="name" name="product_name" value= "<?php echo  $row['FOOTWEAR_NAME']; ?>">
                         <div class="d-flex">
                             <div style="width: 50%;">
@@ -150,6 +150,7 @@ include "partial/login-logics.php";
                         </div>
                        
                         <input type="hidden" class="name" name="product_price" value= "<?php echo  $row['PRICE']; ?>">
+                        <input type="hidden" class="name" name="product_img" value= "<?php echo $row['FOOT_IMG']; ?>">
                         <input type="hidden" class="name" name="type" value= "<?php echo  $row['TYPE_']; ?>">
                         <input type="hidden" class="name" name="categries" value= "<?php echo  $row['CATEGORIES']; ?>">
                         <input type="hidden" class="name" name="style_code" value= "<?php echo $row['STYLE_CODE']; ?>">
@@ -159,7 +160,7 @@ include "partial/login-logics.php";
                         <div>
                             <p class="mt-3">
                                 <span class="text-capitalize fw-semibold pe-1">type: </span>
-                                <span class="text-capitalize fw-bold fs-6"><?php echo $row['PRICE']; ?></span>
+                                <span class="text-capitalize fw-bold fs-6"><?php echo  $row['TYPE_']; ?></span>
                             </p>
                         </div>
                         <div>
@@ -217,11 +218,19 @@ include "partial/login-logics.php";
             <div class="owl-carousel owl-theme">
                 <div class="row">
     <?php
+    if (isset($_GET['t'])) {
+        $sql_query_1 = "SELECT * FROM `user_deals_768` WHERE id <> ?";
+$stmt = $conn->prepare($sql_query_1);
+$stmt->bind_param("s", $id);
+$stmt->execute();
+$result = $stmt->get_result();
+    } else{
 $sql_query_1 = "SELECT * FROM `all_footwears_768` WHERE id <> ?";
 $stmt = $conn->prepare($sql_query_1);
 $stmt->bind_param("s", $id);
 $stmt->execute();
 $result = $stmt->get_result();
+    }
 
 if (!$result) {
     echo "NO DATA IS ADDED: " . $stmt->error;

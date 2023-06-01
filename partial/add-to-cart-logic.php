@@ -6,6 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     include "../config.php";
     
     $product_name = $_POST["product_name"];
+    $product_img = $_POST["product_img"];
     $quantity = $_POST["qty"];
     $size = $_POST["size"];
     $type = $_POST["type"];
@@ -15,10 +16,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $brand = $_POST["brand"];
     $sub_brand = $_POST["sub_brand"];
     $material = $_POST["material"];
+    print_r($product_img);
 
     $conn->query("CREATE TABLE IF NOT EXISTS `wonders_order`.`{$_SESSION['table_name']}` (
         id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
         PRODUCT_NAME varchar(30) NOT NULL,
+        PRODUCT_IMG varchar(50) NOT NULL,
         QUANTITY FLOAT NOT NULL,
         SIZE FLOAT NOT NULL,
         TYPE_ VARCHAR(50) NOT NULL,
@@ -32,8 +35,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $conn->query("USE wonders_order");
 
-    $query = "INSERT INTO {$_SESSION['table_name']} (PRODUCT_NAME, QUANTITY, SIZE, TYPE_, CATEGORIES, PRICE, STYLE_CODE, BRAND, SUB_BRAND, MATERIAL) 
-              VALUES ('$product_name', '$quantity', '$size', '$type', '$categories', '$price', '$code', '$brand', '$sub_brand', '$material')";
+    $query = "INSERT INTO {$_SESSION['table_name']} (PRODUCT_NAME,PRODUCT_IMG, QUANTITY, SIZE, TYPE_, CATEGORIES, PRICE, STYLE_CODE, BRAND, SUB_BRAND, MATERIAL) 
+              VALUES ('$product_name', '$product_img', '$quantity', '$size', '$type', '$categories', '$price', '$code', '$brand', '$sub_brand', '$material')";
 
     if ($conn->query($query) === TRUE) {
        header("location: ../single-view.php?id=$id");

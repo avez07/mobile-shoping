@@ -27,7 +27,7 @@
     
       if (in_array($foot_deal_img_ex_lc , $foot_deal_img_exs)) {
           $new_foot_img_name = uniqid("IMG-", true).'.'.$foot_deal_img_ex;
-          $foot_deal_img_uploading_path = '../deals-image-upload/'.$new_foot_img_name;
+          $foot_deal_img_uploading_path = '../all-footwear-detail/'.$new_foot_img_name;
           move_uploaded_file( $foot_deal_img_tmp_name, $foot_deal_img_uploading_path);
       } else {
           echo "Invalid img format. Please upload a img in jpg, png, format.";

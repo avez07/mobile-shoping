@@ -53,9 +53,9 @@ if ($sql_result_2 === false) {
       while ($row = $sql_result_2->fetch_assoc()) {
           // Output HTML for each row of data
           echo '<div class="col-lg-3 col-6">
-              <a href="deals-view.php" style="text-decoration: none;">
+              <a href="footwear-view-page.php" style="text-decoration: none;">
                   <div class="card onhover">
-                      <img src="deals-image-upload/' . $row['FOOT_IMG'] . '" class="card-img-top high" alt="...">
+                      <img src="all-footwear-detail/' . $row['FOOT_IMG'] . '" class="card-img-top high" alt="...">
                       <div class="card-body">
                           <div class="d-flex justify-content-between">
                               <p class="card-text">

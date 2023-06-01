@@ -286,6 +286,7 @@ color: #fff;
 th{
   background-color: #b12704;
   color: #fff;
+  padding: 10px 0;
 }
 table{
   margin: 20px 10px !important;
@@ -296,8 +297,10 @@ td{
   text-transform: capitalize;
   font-weight: 500;
   padding: 10px 0;
-  border-radius: 5px;
 
+}
+.hover-back:hover{
+  background-color: #fcf9f9e3;
 }
  
   @media screen and (max-width: 600px) {
