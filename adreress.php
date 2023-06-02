@@ -32,7 +32,7 @@
         </div>
         <div class="address-info">
             <div class="tabular-add">
-               <form action="add-alter.php">
+               <form action="actions/updated-address.php" method="post">
                 <div class="row">
                     <div class="col-md-6 py-4 text-capitalize fw-semibold brown" >
                         <label for="name">name</label>

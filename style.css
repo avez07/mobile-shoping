@@ -290,7 +290,7 @@ th{
 }
 table{
   margin: 20px 10px !important;
-  border: 1px solid  #b12704;
+  
   border-radius: 5px;
 }
 td{
@@ -299,9 +299,23 @@ td{
   padding: 10px 0;
 
 }
+tbody{
+  border: 1px solid #b12704;
+}
+
+
+
 .hover-back:hover{
   background-color: #fcf9f9e3;
 }
+.extra-div{
+  position: fixed;
+  width: 69%;
+  height: 54px;
+  background: #fff;
+  margin-top: -30px;    
+}
+
  
   @media screen and (max-width: 600px) {
     .sidenav {padding-top: 15px;}

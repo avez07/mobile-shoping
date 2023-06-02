@@ -32,21 +32,21 @@
         </div>
         <div class="address-info">
             <div class="tabular-add">
-               <form action="add-alter.php">
+               <form action="actions/change-password-logic.php" method="post"  onsubmit="return alert_msg()">
                 <div class="row">
                     <div class="col-md-6 py-4 text-capitalize fw-semibold brown" >
                         <label for="oldpassword">old password</label>
-                        <input type="text" class="form-control" id="add-form" name="oldpassword">
+                        <input type="text" class="form-control" id="add-form" name="old">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6 py-4 text-capitalize fw-semibold brown" >
                         <label for="new password">new password</label>
-                        <input type="text" class="form-control" id="add-form" name="new password">
+                        <input type="text" class="form-control" id="add-form" name="new">
                     </div>
                     <div class="col-md-6 py-4 text-capitalize fw-semibold brown" >
                         <label for="confirm password">confirm password</label>
-                        <input type="text" class="form-control" id="add-form" name="confirm password">
+                        <input type="text" class="form-control" id="add-form" name="confirm">
                     </div>
                    
                     <div class="col-md-2 py-4">
@@ -66,5 +66,14 @@
     integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
     crossorigin="anonymous"></script>
   <script src="index.js"></script>
+  <SCript>
+    function alert_msg() {
+        if (window.confirm("Are You Sure , You Want To `UPDATE` This Record")) {
+            alert("After `UPDATE` You Cannot Undo");
+        } else {
+            return false;
+        }
+    }
+  </SCript>
 </body>
 </html>
