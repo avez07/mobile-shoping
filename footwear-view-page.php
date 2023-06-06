@@ -1,7 +1,8 @@
 <?php
 session_start();
-include  "html-head.php";
-include "partial/login-logics.php"
+include "html-head.php";
+include "partial/login-logics.php";
+include "actions/unset.php";
 ?>
 <body>
 <section class="top-nav" style="background-color: #03202f;">

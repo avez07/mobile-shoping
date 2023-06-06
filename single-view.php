@@ -3,6 +3,7 @@
 include "html-head.php";
 include "click-view-back/single-view-show.php";
 include "partial/login-logics.php";
+include "/actions/unset.php";
 if (isset($_GET['t'])) {
 
     $t= $_GET['t'];

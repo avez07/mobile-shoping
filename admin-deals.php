@@ -1,5 +1,8 @@
 <?php
-include "html-head.php"
+session_start();
+include "html-head.php";
+include "partial/login-logics.php";
+include "actions/unset.php"
     ?>
 
 <body>
@@ -19,7 +22,9 @@ include "html-head.php"
                         <li><span><i class="fa-solid fa-briefcase pe-2"></i></span>orders</li>
                         <li><span><a href="footear-detail.php" class="text-dark" style="text-decoration: none;"><i
                                         class="fa-solid fa-key pe-2"></i></span>shoes data</a></li>
+                                        <a href="actions/logout.php">
                         <li><span><i class="fa-sharp fa-solid fa-right-from-bracket pe-2"></i></span>logout</li>
+</a>
                     </ul>
 
                 </div>

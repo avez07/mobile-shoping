@@ -20,7 +20,7 @@ include "./config.php";
 // Pagination logic
 $sql_query = "SELECT * FROM user_deals_768";
 $sql_result = $conn->query($sql_query);
-$number_of_result = $sql_result->num_rows - 4;
+$number_of_result = $sql_result->num_rows;
 
 function generateRandomNumber($min, $max) {
     return rand($min, $max);
@@ -35,18 +35,19 @@ if (isset($_SESSION['random_number'])) {
   // Generate a new random number between 1 and the number of results (excluding 4) from the query
   $randomNumber = generateRandomNumber(0, $number_of_result);
   $_SESSION['random_number'] = $randomNumber;
+  echo $randomNumber;
  
 }
 
 $result_per_page = 4;
 
 // Fetch data using the random number and result per page limit
-$sql_query_2 = "SELECT * FROM user_deals_768 LIMIT $randomNumber, $result_per_page";
+$sql_query_2 = "SELECT * FROM user_deals_768 LIMIT 0, $result_per_page";
 $sql_result_2 = $conn->query($sql_query_2);
 
 // Check if the query executed successfully
 if ($sql_result_2 === false) {
-  echo "Error executing query: " . $conn->error;
+  echo "Error executing query: " . $sql_result_2->error;
 } else {
   // Check if there are rows returned
   if ($sql_result_2->num_rows > 0) {
