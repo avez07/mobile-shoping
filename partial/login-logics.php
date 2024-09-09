@@ -18,6 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->execute();
     $result = $stmt->get_result();
     // Check if the query returned any rows
+    
     if ($result->num_rows == 1) {
         $row = $result->fetch_assoc();
         $_SESSION['customer_name'] = $row['CUSTOMER_NAME'];
